@@ -1,0 +1,264 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Banner from "../components/Banner.astro";
+import Prototipos from "../components/Prototipos.astro";
+
+const  data = [
+	{
+		name : 'A',
+		rooms : '2',
+		bathrooms : '2 1/2',
+		amenities : ['Cocina', 'Area de Servicio', 'Sala', 'Comedor', 'Terraza'],
+		size : ['86.83 M2', '60.74 M2'],
+		size2 : ['86.83 M2', '10.90 M2'],
+		
+	}
+]
+---
+
+<Layout title="Tatei Ocean">
+    <main>
+
+		<Banner />
+		<!-- NOSOTROS -->
+		<section class="container w-11/12 mx-auto my-20" id="proyecto">
+
+			<div class="flex flex-wrap justify-center sm:flex-nowrap gap-10 flex-col-reverse sm:flex-row">
+				<div class="sm:w-1/2">
+
+					<img
+					class="w-full h-[80vh] object-cover object-center rounded"
+					src="images/TIZATE_EXTERIOR_01.webp"
+					alt="Tizate Exterior"
+					/>
+				</div>
+				<div class="sm:w-1/2">
+					<h1 class="text-center text-[#f5a425] font-bold text-5xl uppercase mb-10">
+						Tatéi <br> <span class="font-[Javacom] normal-case"> Ocean District </span>
+					</h1>
+					<p class="tracking-wide text-lg font-light text-justify">
+						<strong> Tatéi</strong> es un desarrollo residencial
+						ubicado en el corazón de la Riviera Nayarit,
+						en México. Esta zona es conocida por sus hermosas
+						playas, paisajes impresionantes y su ambiente
+						tranquilo y relajado. <br /><br />
+						
+						El desarrollo cuenta con
+						17 departamentos únicos, distribuidos en 7 niveles.
+						Cada departamento ha sido diseñado cuidadosamente
+						para ofrecer comodidad y lujo a sus residentes.
+						<br /><br />
+
+						Uno de los aspectos más destacados de Tatéi
+						es su Roof Garden. Esta área común ofrece
+						impresionantes vistas panorámicas del océano
+						y los alrededores. Aquí, los residentes
+						pueden relajarse en los asoleadores, nadar
+						en las albercas o simplemente disfrutar del
+						sol y la brisa marina. <br /><br />
+
+		
+					</p>	
+				</div>
+			</div>
+		</section>
+
+		<section class="w-full my-20 h-[500px] flex justify-center items-center" id="promotional">
+			<h4 class="title-parallax text-4xl lg:text-7xl text-white text-center uppercase font-bold">
+				Estilo de vida y exclusividad  <br>
+				<span class="font-[Javacom] normal-case tracking-wider">En la Riviera Nayarit.</span>
+			</h4>
+		</section>
+
+		<div>
+			<h2 class="text-center text-[#F5A425] font-bold text-4xl pb-6 font-[Javacom]">Nuestros Prototipos</h2>
+			<Prototipos />
+
+		</div>
+
+		<!-- AMENIDADES -->
+		<section id="amenidades" class="mt-20">
+			<div>
+				<div
+					class="container w-11/12 mx-auto flex  flex-col-reverse md:flex-row"
+				>
+						<div class="md:w-1/2">
+							<img
+							class="w-full h-[600px] md:h-[700px] object-cover object-right"
+							src="/images/TIZATE_ROOFTOP_ALBERCA.webp"
+							alt="Tizate Roof Top Alberca"
+							/>
+						</div>
+						<div class="md:w-1/2 bg-[#21c7b5] flex justify-center items-center flex-col py-20 md:py-6">
+							<h2
+							class="text-center text-white font-bold text-5xl pb-6"
+							>
+							Amenidades <br><span class=" font-[Javacom]">Increíbles</span>
+							</h2>
+							<div class=" ">
+								<div
+								class="flex gap-10 flex-wrap justify-center items-center text-white font-semibold text-xl md:text-3xl py-6 md:py-2 px-5  "
+								>
+								<div class="flex items-center gap-3">
+								<img src="/images/iconos/pool.png"  alt="" class="w-16"/>
+								Alberca
+							</div>
+							<div class="flex items-center gap-3">
+								<img src="/images/iconos/roof-top.png"  alt="" class="w-16"/>
+								Roof Top
+							</div>
+							<div class="flex items-center gap-3">
+								<img src="/images/iconos/parking.png"  alt="" class="w-16"/>
+								Estacionamiento
+							</div>
+							<div class="flex items-center gap-3">
+								<img src="/images/iconos/security.png"  alt="" class="w-16"/>
+								Seguridad
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- POR QUE INVERTIR -->
+		<section class="container w-11/12 mx-auto py-20">
+			<div class="text-center">
+				<h2
+					class="text-center text-[#F5A425] font-bold text-4xl pb-6 font-[Javacom]"
+				>
+					¿Por qué invertir en Tatéi?
+				</h2>
+				<p class="tracking-wide text-lg font-normal pb-6 uppercase">
+					Excelente ubicación | Alta plusvalía | Rentabilidad |
+					Estilo de Vida | Confort.
+				</p>
+			</div>
+			<div class="grid md:grid-cols-3 gap-5">
+				<img src="images/TIZATE_AERERO_01.webp" alt="" />
+				<img src="images/TIZATE_ROOFTOP_ALBERCA.webp" alt="" />
+				<img src="images/TIZATE_ROOFTOP_TERRAZA.jpg" alt="" />
+			</div>
+		</section>
+
+		<!-- Actividades -->
+		<section class="pb-24 hidden">
+			<div class="align-items-center grid lg:grid-cols-2 grid-cols-1">
+				<div class="">
+					<img
+						class="lg:mx-24 mx-3 rounded"
+						src="images/engin-akyurt-SMwCQZWayj0-unsplash.webp"
+						alt=""
+					/>
+				</div>
+				<div class="col-md-6 content-center m-auto">
+					<div>
+						<h3
+							class="text-center text-[#21c7b5] font-semibold text-3xl pb-6"
+						>
+							Descubre la magia de <br /> la Riviera Nayarit
+						</h3>
+					</div>
+					<div class="text-center text-[#a76f4e] text-4xl">
+						<div
+							class="justify-content-center grid lg:grid-cols-3 grid-cols-2 gap-8"
+						>
+							<div class="col-3 mt-4">
+								<i class="fa-solid fa-water"></i>
+								<h3
+									class="tracking-wide text-lg font-light"
+								>
+									Surf
+								</h3>
+							</div>
+							<div class="col-3 mt-4">
+								<i class="fa-solid fa-fish"></i>
+								<h3
+									class="tracking-wide text-lg font-light"
+								>
+									Pesca
+								</h3>
+							</div>
+							<div class="col-3 mt-4">
+								<i class="fa-solid fa-golf-ball-tee"></i>
+								<h3
+									class="tracking-wide text-lg font-light"
+								>
+									Golf
+								</h3>
+							</div>
+							<div class="col-3 mt-4">
+								<i class="fa-solid fa-spa"></i>
+								<h3
+									class="tracking-wide text-lg font-light"
+								>
+									SPA
+								</h3>
+							</div>
+							<div class="col-3 mt-4">
+								<i class="fa-solid fa-utensils"></i>
+								<h3
+									class="tracking-wide text-lg font-light"
+								>
+									Gastronomía
+								</h3>
+							</div>
+							<div class="col-3 mt-4">
+								<i class="fa-solid fa-person-hiking"></i>
+								<h3
+									class="tracking-wide text-lg font-light"
+								>
+									Hiking
+								</h3>
+							</div>
+							<div class="col-3 mt-4">
+								<i class="fa-solid fa-bicycle"></i>
+								<h3
+									class="tracking-wide text-lg font-light"
+								>
+									Bicicleta
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- UBICACIONES -->
+		<section class="container w-11/12 mx-auto">
+			<div>
+				<h2
+					class="text-center text-[#F5A425] font-bold text-4xl pb-6 font-[Javacom]"
+				>
+					Key Locations
+				</h2>
+				<img
+					class="w-full lg:px-24 pb-24"
+					src="images/ubicaciones-tatéi.webp"
+				/>
+			</div>
+		</section>
+
+		<div class="container w-11/12 mx-auto flex gap-5 pb-20 flex-col md:flex-row">
+			<div class="md:w-1/3 text-center md:text-left">
+				<h2 class="text-[#F5A425] font-bold text-4xl pb-6 font-[Javacom]">Contactanos</h2>
+				<p class="text-xl">Tienes alguna pregunta? Envianos un mensaje y nos pondremos en contacto contigo.</p>
+				<ul class="text-xl flex gap-4 flex-col mt-5 mb-12">
+					<a href=""><li><i class="fa-brands fa-whatsapp text-[#1cc2ad] hover:text-[#21c7b5] transition-colors text-2xl"></i> +52 322 1234 123</li></a>
+					<a href=""><li><i class="fa-brands fa-facebook text-[#1cc2ad] hover:text-[#21c7b5] transition-colors text-2xl"></i> Tatei Ocean</li></a>
+					<a href=""><li><i class="fa-brands fa-instagram text-[#1cc2ad] hover:text-[#21c7b5] transition-colors text-2xl"></i> @tateiocean</li></a>
+					<a href=""><li><i class="fa-solid fa-envelope text-[#1cc2ad] hover:text-[#21c7b5] transition-colors text-2xl"></i> info@tateiocean.mx</li></a>
+					<a href=""><li><i class="fa-solid fa-location-dot text-[#1cc2ad] hover:text-[#21c7b5] transition-colors text-2xl"></i> 63734 La Cruz de Huanacaxtle, Nayarit</li></a>
+				</ul>
+				<a href="" class='text-white bg-[#1cc2ad] p-3 rounded-md font-bold'>Descargar Brochure</a>
+			</div>
+			<div class="md:w-2/3">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3730.7930693049893!2d-105.3662193!3d20.759179699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDQ1JzMzLjEiTiAxMDXCsDIxJzU4LjQiVw!5e0!3m2!1sen!2smx!4v1692993456608!5m2!1sen!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+
+		</div>
+	
+    </main>
+</Layout>
