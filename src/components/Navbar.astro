@@ -10,7 +10,7 @@
                 </a>
             </div>
             <div class="md:flex md:items-center md:gap-12">
-                <nav aria-label="Global" class="hidden md:block">
+                <nav class="hidden md:block">
                     <ul class="flex gap-6 items-center uppercase text-lg ">
                         <li>
                             <a class="text-white transition hover:text-[#eea62c]" href="/">Inicio</a>
@@ -32,13 +32,33 @@
                         </li>
                     </ul>
                 </nav>
-                <nav class="md:hidden">
-                    <div class="text-[#eea62c] text-2xl">
-                        <i class="fa-solid fa-bars"></i>
-                    </div>
+                <div class="md:hidden text-[#eea62c] text-2xl" id="btnMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
 
-                </nav>
             </div>
         </div>
     </div>
+    <nav id="menu" class="hidden h-screen items-start pt-20">
+        <ul class="flex gap-6 uppercase text-3xl flex-col justify-center items-center">
+            <li>
+                <a class="text-white transition hover:text-[#eea62c]" href="/">Inicio</a>
+            </li>
+            <li>
+                <a class="text-white transition hover:text-[#eea62c]" href="#nosotros">Nosotros</a>
+            </li>
+            <li>
+                <a class="text-white transition hover:text-[#eea62c]" href="#prototipos">Prototipos</a>
+            </li>
+            <li>
+                <a class="text-white transition hover:text-[#eea62c]" href="#contacto">Contacto</a>
+            </li>
+            <li>
+                <a class="text-white transition hover:text-[#eea62c] text-xl" target="_blank" href="https://www.facebook.com/profile.php?id=100093152359431"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+                <a class="text-white transition hover:text-[#eea62c] text-xl" target="_blank" href="https://www.instagram.com/tatei.ocean/"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+        </ul>
+    </nav>
 </header>

@@ -1,3 +1,37 @@
+const btnMenu = document.querySelector("#btnMenu");
+const menu = document.querySelector("#menu");
+const menuLinks = document.querySelectorAll("#menu a")
+let isActive = false;
+
+btnMenu.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if(!isActive){
+        menu.classList.add("flex","justify-center")
+        menu.classList.remove("hidden");
+        isActive = true;
+        btnMenu.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+    } else {
+        menu.classList.remove("flex","justify-center")
+        menu.classList.add("hidden");
+        isActive = false;
+        btnMenu.innerHTML = `<i class="fa-solid fa-bars"></i>`
+    }
+    
+})
+
+menuLinks.forEach((link) => {
+    link.addEventListener("click", (e) =>{
+        menu.classList.remove("flex","justify-center")
+        menu.classList.add("hidden");
+        isActive = false;
+        btnMenu.innerHTML = `<i class="fa-solid fa-bars"></i>`
+
+    })
+})
+
+
+
 const data = [
     {
         title: "A",
@@ -65,14 +99,13 @@ const data = [
             "Sala",
             "Comedor",
             "Terraza",
-            "Terraza Posterior",
             "Estacionamiento",
         ],
-        size1: ["180.67", "57.40", "7.88"],
-        mainImg: "/images/prototipos/ph-1/render.jpg",
+        size1: ["178.34", "44.79"],
+        mainImg: "/images/prototipos/ph-2/render.jpg",
         secondaryImg: [
-            "/images/prototipos/ph-1/building.png",
-            "/images/prototipos/ph-1/plan.png",
+            "/images/prototipos/ph-2/building.png",
+            "/images/prototipos/ph-2/plan.png",
         ],
     },
     {
@@ -85,22 +118,24 @@ const data = [
             "Sala",
             "Comedor",
             "Terraza",
+            "Terraza Posterior",
             "Estacionamiento",
         ],
-        size1: ["178.34", "44.79"],
-        mainImg: "/images/prototipos/ph-2/render.jpg",
+        size1: ["180.67", "57.40", "7.88"],
+        mainImg: "/images/prototipos/ph-1/render.jpg",
         secondaryImg: [
-            "/images/prototipos/ph-2/building.png",
-            "/images/prototipos/ph-2/plan.png",
+            "/images/prototipos/ph-1/building.png",
+            "/images/prototipos/ph-1/plan.png",
         ],
-    },
+    }
+    
 ];
 
 const roomCards = document.querySelector("#room-cards");
 const roomSlide = document.querySelector("#room-slide");
 
 
-const contentCards = data.map((room) => {
+const contentCards = data.map((room, index) => {
     const amenitiesList = room.amenities
         .slice(0, 2)
         .map((amenity) => `<li>${amenity}</li>`)
@@ -121,8 +156,8 @@ const contentCards = data.map((room) => {
                 ${amenitiesHidden}
             </ul>
             <div class="md:hidden flex gap-3 items-center justify-center my-3">
-                <a href="#" class="font-bold p-2 bg-[#F5A425] rounded-sm">PLANTA</a>
-                <a href="#" class="font-bold p-2 bg-[#F5A425] rounded-sm">UBICACION</a>
+                <a href="#" class="font-bold p-2 bg-[#F5A425] rounded-sm planta" key="${index}">PLANTA</a>
+                <a href="#" class="font-bold p-2 bg-[#F5A425] rounded-sm ubicacion" key="${index}">UBICACION</a>
             </div>
         </div>
         <img src=${room.mainImg}  class="rounded-b-md pt-3"/>
@@ -221,3 +256,54 @@ var swiper2 = new Swiper(".mySwiper3", {
     },
    
 });
+
+const whatsappButton = document.querySelector('#whatsapp')
+
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 720){
+        whatsappButton.classList.remove("hidden");
+    } else {
+        whatsappButton.classList.add("hidden")
+    }
+})
+
+const popup = document.querySelector('#popup');
+const closePopup = document.querySelector("#closePopup");
+const contentPopup = document.querySelector("#contentPopup");
+const planta = document.querySelectorAll(".planta");
+const ubicacion = document.querySelectorAll(".ubicacion");
+
+planta.forEach((planta) => {
+    planta.addEventListener("click", (e) => {
+        e.preventDefault();
+        const key = planta.getAttribute("key");
+        const img = data[key].secondaryImg[0];
+        const alt = data[key].title;
+        contentPopup.innerHTML = `<img src=${img} alt="Prototipo - ${alt}">`
+        popup.classList.add("flex");
+        popup.classList.remove("hidden");
+
+    })
+})
+
+ubicacion.forEach((ubicacion) => {
+    ubicacion.addEventListener("click", (e) => {
+        e.preventDefault();
+        const key = ubicacion.getAttribute("key");
+        const img = data[key].secondaryImg[1];
+        const alt = data[key].title;
+        contentPopup.innerHTML = `<img src=${img} alt="Prototipo - ${alt}">`
+        popup.classList.add("flex");
+        popup.classList.remove("hidden");
+    })
+})
+
+closePopup.addEventListener("click", (e) => {
+    popup.classList.add("hidden");
+    popup.classList.remove("flex");
+    contentPopup.innerHTML = "";
+
+})
+
+
+

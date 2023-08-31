@@ -1,6 +1,8 @@
 --- 
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
+import WhatsApp from '../components/WhatsApp.astro';
+import Popup from '../components/Popup.astro';
 import '../global.css';
 
 
@@ -28,9 +30,11 @@ const { title } = Astro.props;
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 	</head>
 	<body>
+		<Popup />
 		<Navbar />
 			<slot />
 		<Footer />
+		<WhatsApp />
 		<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 		<!-- Initialize Swiper -->
