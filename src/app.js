@@ -453,6 +453,15 @@ const contentSlideEn = dataEn.map((room) => {
     `
 })
 document.addEventListener("DOMContentLoaded", function () {
+
+    if (ruta === "/en") {
+        roomCardsEn.innerHTML = contentCardsEn.join("");
+        roomSlideEn.innerHTML = contentSlideEn.join("");
+        
+    } else {
+        roomCards.innerHTML = contentCards.join("");
+        roomSlide.innerHTML = contentSlide.join("");
+    }
     
     var swiper = new Swiper(".mySwiper", {
         pagination: {
@@ -496,13 +505,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         
     });
-    if (ruta === "/en") {
-        roomCardsEn.innerHTML = contentCardsEn.join("");
-        roomSlideEn.innerHTML = contentSlideEn.join("");
-        
-    } else {
-        roomCards.innerHTML = contentCards.join("");
-        roomSlide.innerHTML = contentSlide.join("");
-    }
+
+    
     
 });
