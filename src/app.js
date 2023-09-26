@@ -220,51 +220,7 @@ const contentSlide = data.map((room) => {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    
-    var swiper = new Swiper(".mySwiper", {
-        pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-    
-    var swiper = new Swiper(".mySwiper2", {
-        spaceBetween: 10,
-        slidesPerView: 1,
-        breakpoints: {
-            640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 40,
-            },
-            1200: {
-                slidesPerView: 4,
-                spaceBetween: 40,
-            },
-        },
-    });
-    
-    var swiper2 = new Swiper(".mySwiper3", {
-        loop: true,
-        spaceBetween: 10,
-        thumbs: {
-            swiper: swiper,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        
-    });
-});
+
     
 const whatsappButton = document.querySelector('#whatsapp')
     
@@ -415,7 +371,7 @@ const dataEn = [
             "/images/prototipos/ph-1/plan.png",
         ],
     }
-    
+
 ];
 
 const roomCardsEn = document.querySelector("#room-cards-en");
@@ -496,12 +452,57 @@ const contentSlideEn = dataEn.map((room) => {
     </div>
     `
 })
-
-if (ruta === "/en") {
-    roomCardsEn.innerHTML = contentCardsEn.join("");
-    roomSlideEn.innerHTML = contentSlideEn.join("");
-
-} else {
-    roomCards.innerHTML = contentCards.join("");
-    roomSlide.innerHTML = contentSlide.join("");
-}
+document.addEventListener("DOMContentLoaded", function () {
+    
+    var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+    
+    var swiper = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+        },
+    });
+    
+    var swiper2 = new Swiper(".mySwiper3", {
+        loop: true,
+        spaceBetween: 10,
+        thumbs: {
+            swiper: swiper,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        
+    });
+    if (ruta === "/en") {
+        roomCardsEn.innerHTML = contentCardsEn.join("");
+        roomSlideEn.innerHTML = contentSlideEn.join("");
+        
+    } else {
+        roomCards.innerHTML = contentCards.join("");
+        roomSlide.innerHTML = contentSlide.join("");
+    }
+    
+});
