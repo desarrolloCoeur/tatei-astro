@@ -454,7 +454,7 @@ const contentSlideEn = dataEn.map((room) => {
 })
 document.addEventListener("DOMContentLoaded", function () {
 
-    if (ruta === "/en") {
+    if (ruta === "/en/") {
         roomCardsEn.innerHTML = contentCardsEn.join("");
         roomSlideEn.innerHTML = contentSlideEn.join("");
         
