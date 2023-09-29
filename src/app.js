@@ -392,7 +392,7 @@ const contentCardsEn = dataEn.map((room, index) => {
     return `
         <div class="swiper-slide text-white bg-[#21c7b5] rounded-md">
         <div class="text-center pt-2">
-            <h3 class="font-bold text-lg tracking-widest">PROTOTIPE</h3>
+            <h3 class="font-bold text-lg tracking-widest">PROTOTYPE</h3>
             <span class="text-[#F5A425] text-6xl font-bold">${room.title}</span>
             <ul class="py-2 uppercase text-lg">
                 ${amenitiesList}
